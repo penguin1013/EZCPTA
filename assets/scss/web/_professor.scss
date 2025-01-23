@@ -1,0 +1,230 @@
+.professor-container{
+	*{
+		font-family:$font-pretendard;
+		font-size:16px;
+		font-weight: 400;
+		line-height: 24px;
+		word-break: keep-all;
+		letter-spacing:-0.5px;
+	}
+
+	.button{
+		display:inline-block;
+		color:#3B3B3E;
+		font-size:16px;font-weight:700;
+		padding:10px 20px;
+		border:1px solid #E6E6E7;
+		border-radius:10px;
+		background-color:#fff;
+		cursor:pointer;
+	}
+
+	.professor-inner-container{
+		position:relative;
+		margin:0 auto;
+		max-width: 1280px;
+		min-width: 1280px;
+
+	}
+
+	.professor-container-home{
+		position:relative;
+		width:100%;
+		height:815px;
+		background-position:center top;
+		background-repeat:no-repeat;
+		@include boxSizing(border-box);
+	
+		.professor-inner-container{
+			max-width: 1440px;
+			min-width: 1440px;
+			display:flex;
+			justify-content: flex-end;
+			.professor-info{
+				padding-top:55.5px;
+				.text-box{
+					text-align:left;
+					.subject{
+						color:#09499F;font-size:20px;font-weight:700;
+						line-height:1;
+						&.color-purple{
+							color:#790097;
+						}
+						&.color-green{
+							color:#2D7900;
+						}
+
+						&.color-light-green{
+							color:#099F95;
+						}
+
+					}
+					.name{
+						margin-top:24px;
+						color:#0F0F10;font-size:40px;font-weight:700;
+						line-height:1;
+					}
+
+					.desc{
+						margin-top:24px;
+						color:#666;font-size:26px;font-weight:700;
+						line-height:38px;
+						height:72px;
+					}
+					.action{
+						margin-top:24px;
+					
+					}
+				}
+				
+				.banner-box{
+					margin-top:24px;
+					width:402px;
+					img{width:100%;}
+				}
+
+				.video-box{
+					margin-top:16px;
+					width:402px;height:226px;
+					iframe{
+						width:100%;
+						height:100%;
+					}
+				}
+			}
+
+			.professor-photo{
+				margin-left:24px;
+			}
+		}
+	}
+
+	.professor-container-menu{
+		ul{
+			position:absolute;left:0;width:100%;bottom:0;z-index:10;
+			background-color:rgba(0,0,0,0.3);top:auto;
+			width:100%;
+			height:64px;
+			text-align:center;
+			display:flex;justify-content: center;align-items:center;
+
+			&.fixed{
+				position:fixed;
+				bottom:auto;
+				top:0;
+	
+			}
+			li{
+				a{
+					height:100%;
+					color:#fff;
+					font-size:16px;
+					font-weight: 600;
+					display:flex;justify-content: center;align-items:center;
+					margin: 0 16px;
+				}
+				&.active{
+					a{
+						color:#0258D9;
+					}
+				}
+			}
+		}
+	}
+
+	.professor-container-board{
+		padding:48px 0;
+		
+		.professor-board{
+			display:flex;
+			justify-content: space-between;
+			text-align:left;
+			.professor-board-content{
+				width:624px;
+				
+
+				.professor-board-header{
+					padding:8px 0;
+					display:flex;
+					align-items:center;
+					justify-content: space-between;
+					.professor-board-title{
+						color:#3B3B3E;
+						font-size:24px;
+						font-weight:700;
+					}
+				}
+				.professor-board-list{
+					margin-top:16px;
+					border:1px solid #E6E6E7;
+					border-radius:12px;
+					padding:12px 24px;
+					height:304px;
+					@include boxSizing(border-box);
+					.board-list{
+						display:flex;
+						justify-content: space-between;
+						cursor:pointer;
+						.board-list-title{	@include boxSizing(border-box);width:480px;padding:18px 8px;color:#3B3B3E;font-size:14px;font-weight: 500;@extend %textEllipsis;line-height:20px;}
+						.board-list-date{padding:18px 8px;color:#3B3B3E;font-size:14px;font-weight: 500;line-height:20px;}
+						&:hover{
+							.board-list-title{color:#0258D9;}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.professor-container-content{
+		position:relative;
+		width:100%;
+		height:1450px;
+		background-position:center top;
+		background-repeat:no-repeat;
+		background-color:#000;
+		.professor-text{
+			position:absolute;top:114px;left:878px;
+			text-align:left;
+			.subject{
+				color:#000;font-size:18px;font-weight:900;padding:10px 20px;
+				line-height:1;background-color:#fff;border-radius:999px;
+				display:inline-block;
+			}
+			.desc{
+				margin-top:24px;
+				color:#fff;font-size:26px;font-weight:600;
+				line-height:38px;
+			}
+
+			.name{
+				margin-top:8px;
+				color:#fff;font-size:48px;font-weight:700;
+				line-height:60px;
+			}
+
+			.info{
+				margin-top:24px;
+				color:#fff;font-size:16px;font-weight:600;
+				line-height:28px;
+			}
+
+		}
+
+		.professor-img{
+			text-align:center;
+		}
+
+		.professor-badge{
+			position:absolute;left:0;top:655px;
+		}
+		.professor-content{
+			position:absolute;left:0;top:834px;right:0;
+			background-color:rgba(0,0,0,0.8);
+
+			img{
+				width:100%;
+			}
+		}
+	}
+}
